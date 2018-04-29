@@ -1,0 +1,112 @@
+/**-----------------------------------------------------
+  *   HEADER                                             
+  *-----------------------------------------------------
+  */
+
+/* ======= Navbar Section ======= */
+.navbar {
+  &.yb-main-menu {
+    padding-top: 1.5em;
+    background-color: rgba($white, 0);
+    @include box-shadow(0 0 0 0 rgba($black, 0));
+    @include transition(padding 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-in);
+    &.sticky {
+      padding-top: 0;
+      background-color: rgba($white, 1);
+      @include box-shadow(0 1px 8px 0 rgba($black, 0.1));
+
+      .nav-item {
+        .nav-link {
+          color: $yb_dark_blue;
+        }
+        &.active {
+          .nav-link {
+            color: $yb_blue;
+          }
+        }
+      }
+
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        @include font(14.5px, $regular, $normal, $open_sans);
+        margin-right: 25px;
+      }
+      &:last-child {
+        .nav-link {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+} // .navbar
+
+.logo-brand {
+  @include font(30px, $regular, $normal, $pacifico);
+}
+/*/////////////////////////////////////////*/
+/*/////////////////////////////////////////*/
+
+/* ======= Slider Section ======= */
+// Slider Image
+.slider-image {
+  position: relative;
+  background: no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+
+  .slider-text-block {
+      .text {
+          h1 {
+              @include font(48px, $bold, $normal, $open_sans);
+          }
+      }
+  }
+
+  .yb-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($yb_darker_blue, 0.7);
+  }
+
+}
+
+// Control Nav Prev and Next
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev {
+  left: 20%;
+}
+
+.carousel-control-next {
+  right: 20%;
+}
+
+// Carousel Indicators
+.carousel-indicators li {
+  width: 7px;
+  height: 7px;
+  @include border-radius(50%);
+  margin-left: 9px;
+  margin-right: 9px;
+  background-color: $white;
+  
+  &.active {
+      &:after {
+          width: 25px;
+          height: 25px;
+          border: 2px solid $white;
+          @include transform(translate(-37%, -2%));
+          @include border-radius(50%);
+      }
+  }
+}

@@ -1,0 +1,60 @@
+/**-----------------------------------------------------
+  *   BASE STYLES                                             
+  *-----------------------------------------------------
+  */
+
+// Text Colors
+.yb-text-yellow { color: $yb_yellow !important; }
+.yb-text-yellow-burn { color: $yb_yellow_burn !important; }
+.yb-text-blue { color: $yb_blue !important; }
+.yb-text-lighter-blue { color: $yb_lighter_blue !important; }
+.yb-text-light-blue { color: $yb_light_blue !important; }
+.yb-text-dark-blue { color: $yb_dark_blue !important; }
+.yb-text-gray { color: $yb_gray !important; }
+.yb-text-light-gray { color: $yb_light_gray !important; }
+
+// Background Colors
+.yb-yellow { background-color: $yb_yellow !important; }
+.yb-yellow-burn { background-color: $yb_yellow_burn !important; }
+.yb-blue { background-color: $yb_blue !important; }
+.yb-lighter-blue { background-color: $yb_lighter_blue !important; }
+.yb-light-blue { background-color: $yb_light_blue !important; }
+.yb-dark-blue { background-color: $yb_dark_blue !important; }
+.yb-gray { background-color: $yb_gray !important; }
+.yb-light-gray { background-color: $yb_light_gray !important; }
+
+// Button Font
+.btn-font {
+  @include font(14px, $regular, $normal, $lato);
+}
+
+// Section Title Icon
+.yb-section-title-icon {
+
+	@include font-size(24px);
+
+	&.yb-with-lines {
+		display: inline-block;
+		position: relative;
+
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			height: 1px;
+			width: 90px;
+			background-color: currentColor;
+			top: 0.8em;
+		}
+
+		&:after {
+			right: 1.5em;
+		}
+
+		&:before {
+			left: 1.5em;
+		}
+
+	}
+}

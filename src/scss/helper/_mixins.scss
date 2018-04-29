@@ -1,0 +1,64 @@
+// Import Flexbox
+@import "helper/flexbox-mixins";
+// Font
+@mixin font($size, $weight, $style, $family) {
+  //font-size: $size;
+  font-size: calculateRem($size);
+  //line-height: $size * 1.5;
+  line-height: calculateRem($size * 1.5);
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($size * 1.5);
+}
+
+// BOX SHADOW
+@mixin box-shadow($value...) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+// TRANSITION
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+// TRANSFORM
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// Border radius
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
+// Box sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+// User select
+@mixin user-select($value) {
+  -webkit-user-select: $value; /* Safari 3.1+ */
+     -moz-user-select: $value; /* Firefox 2+ */
+      -ms-user-select: $value; /* IE 10+ */
+          user-select: $value; /* Standard syntax */
+}

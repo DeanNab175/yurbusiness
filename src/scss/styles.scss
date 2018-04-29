@@ -1,0 +1,21 @@
+// Variables
+@import "helper/variables.scss";
+
+// Bootstrap Variables Overrides
+@import "bs_variables_overrides.scss";
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Mixins
+@import "helper/mixins.scss";
+
+// Functions
+@import "helper/functions.scss";
+
+// Base
+@import "base.scss";
+
+// Partials
+@import "partials/header.scss";
+@import "partials/main.scss";
+@import "partials/footer.scss";

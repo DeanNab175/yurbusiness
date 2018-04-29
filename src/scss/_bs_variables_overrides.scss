@@ -1,0 +1,17 @@
+// Variables Overrides
+$theme-colors: (
+  "yb-blue": $yb_blue,
+  "yb-yellow": $yb_yellow,
+  "yb-yellow-burn": $yb_yellow_burn
+);
+
+$colors: (
+  "yb-text-blue": $yb_blue,
+  "yb-text-yellow": $yb_yellow
+);
+
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 5),
+  7: ($spacer * 6)
+);

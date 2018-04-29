@@ -1,0 +1,23 @@
+footer {
+    
+}
+
+.yb-ft-logo-name {
+    @include font(22px, $regular, $normal, $pacifico);
+}
+
+.yb-ft-p {
+    @include font(14px, $regular, $normal, $lato);
+}
+
+.yb-ft-heading {
+    @include font(22px, $regular, $normal, $open_sans);
+}
+
+.yb-font-size-20 {
+    @include font-size(20px);
+}
+
+.yb-ft-contact-p {
+    @include font(13.5px, $regular, $normal, $open_sans);
+}
